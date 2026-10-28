@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmad Riady Sugino — Senior Full Stack Developer</title>
+    <title>Ahmad Riady Sugino - Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
@@ -71,23 +71,6 @@
         width: 0%;
         background: linear-gradient(to right, #0d9488, #2dd4bf);
         transition: width 0.1s;
-      }
-
-      /* ── TYPING ── */
-      .typing-cursor::after {
-        content: "|";
-        animation: blink 1s step-end infinite;
-        color: var(--accent);
-        margin-left: 2px;
-      }
-      @keyframes blink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
       }
 
       /* ── HERO NAME ── */
@@ -383,33 +366,42 @@
     </nav>
 
     <!-- ══════════════════ HERO ══════════════════ -->
-    <section id="hero" class="min-h-screen flex items-center pt-16">
-      <div class="max-w-5xl mx-auto px-6 py-24 w-full">
-        <div
-          class="flex flex-col md:flex-row items-center md:items-start gap-12"
-        >
+    <section
+      id="hero"
+      class="relative overflow-hidden min-h-screen flex items-center pt-16"
+    >
+      <canvas
+        id="hero-canvas"
+        class="absolute inset-0 w-full h-full pointer-events-none"
+        aria-hidden="true"
+      ></canvas>
+      <div class="relative max-w-5xl mx-auto px-6 py-24 w-full">
+        <div>
           <div>
             <p
               class="section-eyebrow mb-4"
-              data-en="Senior Full Stack Developer"
-              data-id="Senior Full Stack Developer"
+              data-en="Full Stack Developer"
+              data-id="Full Stack Developer"
             >
-              Web and Apps Developer
+              Full Stack Developer
             </p>
             <h1
               class="font-display text-5xl md:text-6xl leading-tight hero-name mb-6"
             >
-              <span>A</span>hmad <span>R</span>iady<br /><span>S</span>ugino
+              <span>A</span>hmad <span>R</span>iady <span>S</span>ugino
             </h1>
-            <p class="text-lg mb-2" style="color: var(--muted)">
-              <span
-                id="typing-text"
-                class="typing-cursor font-medium"
-                style="color: var(--fg2)"
-              ></span>
+            <p
+              class="text-lg mb-2 max-w-xl"
+              style="color: var(--muted)"
+              data-en="I build web and mobile apps end to end — Vue/React/Svelte on the front, Laravel and Node.js on the back, and the servers they run on."
+              data-id="Saya membangun aplikasi web dan mobile dari ujung ke ujung — Vue/React/Svelte di front-end, Laravel dan Node.js di back-end, sampai server tempatnya berjalan."
+            >
+              I build web and mobile apps end to end — Vue/React/Svelte on the
+              front, Laravel and Node.js on the back, and the servers they run
+              on.
             </p>
             <p
-              class="text-sm flex items-center gap-2 mt-4 mb-8"
+              class="text-sm flex items-center gap-2 mt-4 mb-3"
               style="color: var(--subtle)"
             >
               <svg
@@ -434,6 +426,85 @@
               </svg>
               Indonesia
             </p>
+            <!-- Social (icons: simple-icons) -->
+            <div class="flex items-center gap-4 mb-8">
+              <a
+                href="https://www.linkedin.com/in/ariadys"
+                target="_blank"
+                rel="noopener"
+                class="nav-link"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/ariadys"
+                target="_blank"
+                rel="noopener"
+                class="nav-link"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@ars.dev0"
+                target="_blank"
+                rel="noopener"
+                class="nav-link"
+                aria-label="TikTok"
+                title="TikTok"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com/ariadys_"
+                target="_blank"
+                rel="noopener"
+                class="nav-link"
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+            </div>
             <div class="flex flex-wrap gap-3">
               <a
                 href="#projects"
@@ -496,50 +567,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Stats -->
-        <div
-          class="mt-20 grid grid-cols-3 gap-6 border-t pt-10"
-          style="border-color: var(--border-gray)"
-        >
-          <div>
-            <p class="font-display text-4xl" style="color: var(--accent)">
-              10+
-            </p>
-            <p
-              class="text-sm mt-1"
-              style="color: var(--muted)"
-              data-en="Years of Experience"
-              data-id="Tahun Pengalaman"
-            >
-              Years of Experience
-            </p>
-          </div>
-          <div>
-            <p class="font-display text-4xl" style="color: var(--accent)">
-              50+
-            </p>
-            <p
-              class="text-sm mt-1"
-              style="color: var(--muted)"
-              data-en="Projects Completed"
-              data-id="Proyek Selesai"
-            >
-              Projects Completed
-            </p>
-          </div>
-          <div>
-            <p class="font-display text-4xl" style="color: var(--accent)">8+</p>
-            <p
-              class="text-sm mt-1"
-              style="color: var(--muted)"
-              data-en="Technologies Mastered"
-              data-id="Teknologi Dikuasai"
-            >
-              Technologies Mastered
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -565,45 +592,36 @@
         <div class="grid md:grid-cols-2 gap-12 items-start fade-in">
           <div class="space-y-5 leading-relaxed" style="color: var(--muted)">
             <p
-              data-en='I am a passionate <strong style="color:var(--fg2)">Software Engineer</strong> with over <strong style="color:var(--accent)">10 years</strong> in the technology industry — spanning front-end interface design to back-end system architecture and cloud infrastructure.'
-              data-id='Saya adalah seorang <strong style="color:var(--fg2)">Software Engineer</strong> berpengalaman dengan lebih dari <strong style="color:var(--accent)">10 tahun</strong> di industri teknologi — mulai dari antarmuka pengguna hingga arsitektur sistem back-end dan infrastruktur cloud.'
+              data-en='I&apos;m a <strong style="color:var(--fg2)">Software Engineer</strong> with <strong style="color:var(--accent)">10+ years</strong> of building business software: POS, ERP, internal dashboards, and government reporting apps.'
+              data-id='Saya <strong style="color:var(--fg2)">Software Engineer</strong> dengan pengalaman <strong style="color:var(--accent)">10+ tahun</strong> membangun software bisnis: POS, ERP, dashboard internal, dan aplikasi pelaporan ke pemerintah.'
             >
-              I am a passionate
+              I'm a
               <strong style="color: var(--fg2)">Software Engineer</strong> with
-              over <strong style="color: var(--accent)">10 years</strong> in the
-              technology industry — spanning front-end interface design to
-              back-end system architecture and cloud infrastructure.
+              <strong style="color: var(--accent)">10+ years</strong> of
+              building business software: POS, ERP, internal dashboards, and
+              government reporting apps.
             </p>
             <p
-              data-en="My journey began as a front-end developer who fell in love with user experience, then naturally evolved into back-end engineering, databases, and cloud infrastructure. I believe the best engineers understand every layer of a system."
-              data-id="Perjalanan saya dimulai sebagai frontend developer yang jatuh cinta pada pengalaman pengguna, kemudian berkembang ke back-end, database, hingga infrastruktur cloud. Saya percaya engineer terbaik memahami setiap lapisan dari sebuah sistem."
+              data-en="I started on the front end and moved down the stack into APIs, databases, and server operations. Most of my work now is on the back end, but I still ship the UI."
+              data-id="Saya mulai dari front-end lalu turun ke API, database, dan operasional server. Sekarang lebih banyak di back-end, tapi tetap mengerjakan UI-nya juga."
             >
-              My journey began as a front-end developer who fell in love with
-              user experience, then naturally evolved into back-end engineering,
-              databases, and cloud infrastructure. I believe the best engineers
-              understand every layer of a system.
+              I started on the front end and moved down the stack into APIs,
+              databases, and server operations. Most of my work now is on the
+              back end, but I still ship the UI.
             </p>
             <p
-              data-en='I currently serve as <strong style="color:var(--fg2)">Senior Full Stack Developer</strong> at <strong style="color:var(--accent)">Capture Data Teknologi</strong>, leading the development of an enterprise-grade data platform serving thousands of active users daily.'
-              data-id='Saat ini saya menjabat sebagai <strong style="color:var(--fg2)">Senior Full Stack Developer</strong> di <strong style="color:var(--accent)">Capture Data Teknologi</strong>, memimpin pengembangan platform data enterprise yang melayani ribuan pengguna aktif setiap harinya.'
+              data-en='Currently <strong style="color:var(--fg2)">Senior Full Stack Developer</strong> at <strong style="color:var(--accent)">Capture Data Teknologi</strong>, working on the company&apos;s data platform and reviewing code for the junior developers on the team.'
+              data-id='Saat ini <strong style="color:var(--fg2)">Senior Full Stack Developer</strong> di <strong style="color:var(--accent)">Capture Data Teknologi</strong>, mengerjakan platform data perusahaan dan me-review kode developer junior di tim.'
             >
-              I currently serve as
+              Currently
               <strong style="color: var(--fg2)"
                 >Senior Full Stack Developer</strong
               >
               at
               <strong style="color: var(--accent)"
                 >Capture Data Teknologi</strong
-              >, leading the development of an enterprise-grade data platform
-              serving thousands of active users daily.
-            </p>
-            <p
-              data-en="Outside of work, I actively contribute to open-source projects, write about software engineering, and mentor junior developers within the local tech community."
-              data-id="Di luar pekerjaan, saya aktif berkontribusi pada proyek open-source, menulis tentang software engineering, dan menjadi mentor bagi developer muda di komunitas teknologi lokal."
-            >
-              Outside of work, I actively contribute to open-source projects,
-              write about software engineering, and mentor junior developers
-              within the local tech community.
+              >, working on the company's data platform and reviewing code for
+              the junior developers on the team.
             </p>
           </div>
 
@@ -752,14 +770,15 @@
               // Frontend
             </h3>
             <div class="flex flex-wrap gap-3">
+              <span class="skill-badge">Svelte</span>
               <span class="skill-badge">Vue.js</span>
+              <span class="skill-badge">Flutter</span>
               <span class="skill-badge">Next.js</span>
               <span class="skill-badge">TypeScript</span>
               <span class="skill-badge">JavaScript</span>
               <span class="skill-badge">Tailwind CSS</span>
               <span class="skill-badge">HTML / CSS</span>
               <span class="skill-badge">Vite / Webpack</span>
-              <span class="skill-badge">Flutter</span>
               <span class="skill-badge">React.js</span>
             </div>
           </div>
@@ -772,12 +791,16 @@
             </h3>
             <div class="flex flex-wrap gap-3">
               <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Go</span>
+              <span class="skill-badge">Rust</span>
               <span class="skill-badge">Express.js</span>
               <span class="skill-badge">Python</span>
               <span class="skill-badge">Django</span>
               <span class="skill-badge">REST API</span>
               <span class="skill-badge">GraphQL</span>
               <span class="skill-badge">Laravel</span>
+              <span class="skill-badge">Nest.js</span>
+              <span class="skill-badge">Meteor.js</span>
             </div>
           </div>
           <div>
@@ -790,6 +813,7 @@
             <div class="flex flex-wrap gap-3">
               <span class="skill-badge">PostgreSQL</span>
               <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">SQL Server</span>
               <span class="skill-badge">MongoDB</span>
               <span class="skill-badge">Redis</span>
               <span class="skill-badge">ElasticSearch</span>
@@ -857,8 +881,8 @@
               <p
                 class="font-mono text-xs mb-5"
                 style="color: var(--subtle)"
-                data-en="2022 — Present · Indonesia"
-                data-id="2022 — Sekarang · Indonesia"
+                data-en="Jan 2026 — Present · Indonesia"
+                data-id="Jan 2026 — Sekarang · Indonesia"
               >
                 Jan 2026 — Present · Indonesia
               </p>
@@ -867,65 +891,36 @@
                 class="bg-white border rounded-2xl p-6 space-y-6"
                 style="border-color: var(--border-gray)"
               >
-                <!-- Frontend -->
                 <div>
                   <ul class="space-y-2 text-sm" style="color: var(--muted)">
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Designed and architected stable, highly scalable, and
-                        fault-tolerant distributed systems to support growing
-                        user bases and business demands.
-                      </span>
+                      <span
+                        >Build features across the company's data platform, from
+                        Vue screens down to the API and database schema.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Managed and monitored production servers and cloud
-                        infrastructure, implementing proactive alerting systems
-                        to ensure maximum uptime and performance.
-                      </span>
+                      <span
+                        >Run the production servers and set up monitoring and
+                        alerting for them.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Led and mentored a team of junior and mid-level
-                        developers, conducting rigorous code reviews to maintain
-                        high standards of code quality and security.
-                      </span>
+                      <span
+                        >Maintain the CI/CD pipeline that tests and deploys
+                        every merge.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Optimized application performance across the entire
-                        stack, significantly reducing database query times, page
-                        load latencies, and API response overhead.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Streamlined CI/CD pipelines (Continuous
-                        Integration/Continuous Deployment) to automate testing
-                        and deployment processes, accelerating release cycles.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Collaborated closely with cross-functional teams,
-                        including Product Managers, UX/UI designers, and
-                        stakeholders, to translate complex business requirements
-                        into technical solutions.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Enforced security best practices (such as OWASP top 10)
-                        across frontend and backend systems, implementing robust
-                        authentication, authorization, and data encryption.
-                      </span>
+                      <span
+                        >Review pull requests from junior and mid-level
+                        developers, with a focus on auth, access control, and
+                        OWASP Top 10 issues.</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -965,95 +960,58 @@
               <p
                 class="font-mono text-xs mb-4"
                 style="color: var(--subtle)"
-                data-en="2021 - Dec 2025"
-                data-id="2021 - Dec 2025"
+                data-en="2021 — Dec 2025"
+                data-id="2021 — Dec 2025"
               >
-                2021 - Dec 2025
+                2021 — Dec 2025
               </p>
               <div
                 class="bg-white border rounded-2xl p-6 space-y-6"
                 style="border-color: var(--border-gray)"
               >
-                <!-- Frontend -->
                 <div>
                   <ul class="space-y-2 text-sm" style="color: var(--muted)">
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Designed and implemented robust, fast, and
-                        easy-to-integrate APIs optimized for performance and
-                        scalability, ensuring secure access, proper
-                        authorization management, and thorough documentation.
-                      </span>
+                      <span
+                        >Built a POS system with multiple payment methods,
+                        inventory, and transaction reports.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Optimized data distribution flows between systems,
-                        reducing latency, improving data transfer efficiency,
-                        and maximizing the use of available bandwidth and
-                        resources.
-                      </span>
+                      <span
+                        >Built ERP modules for products, inventory, sales, and
+                        supply chain, including scheduled reports.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Improved database design and query performance, reducing
-                        response time while maintaining data consistency and
-                        integrity, even at large scales.
-                      </span>
+                      <span
+                        >Designed and documented the REST APIs other internal
+                        systems integrate with.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Designed and implemented user-friendly, scalable POS
-                        systems integrated with various payment methods,
-                        inventory management, and transactional reporting
-                        features.
-                      </span>
+                      <span
+                        >Split parts of the monolith into microservices so they
+                        could be deployed separately.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Built and enhanced ERP modules for efficient product,
-                        inventory, and sales management, integrating automated
-                        reporting and supply chain management features.
-                      </span>
+                      <span
+                        >Reworked database schemas and slow queries as data
+                        volume grew.</span
+                      >
                     </li>
                     <li class="flex items-start gap-2">
                       <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Created modular microservices architecture allowing
-                        independent development, deployment, and maintenance of
-                        components to improve system flexibility and
-                        scalability.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Developed modern, interactive, and user-friendly
-                        front-end interfaces for web and mobile applications,
-                        ensuring a high-quality user experience (UX) and
-                        responsive design across devices.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Handled and processed large-scale data using big data
-                        technologies, implementing efficient solutions for data
-                        storage, processing, and analysis.
-                      </span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span style="color: var(--accent)" class="mt-0.5">→</span>
-                      <span>
-                        Designed and implemented services integrated with
-                        artificial intelligence (AI) technologies, such as
-                        machine learning, to automate business processes,
-                        support decision-making, and enable predictive analysis
-                      </span>
+                      <span
+                        >Built front ends for the web and mobile versions of
+                        these apps.</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -1070,18 +1028,29 @@
         <div class="fade-in">
           <p
             class="section-eyebrow mb-3"
-            data-en="Portfolio"
-            data-id="Portofolio"
+            data-en="Side Projects"
+            data-id="Proyek Sampingan"
           >
-            Portfolio
+            Side Projects
           </p>
           <h2
-            class="font-display text-4xl mb-12 section-title-line"
-            data-en="Selected Projects"
-            data-id="Proyek Pilihan"
+            class="font-display text-4xl mb-4 section-title-line"
+            data-en="Freelance Work"
+            data-id="Pekerjaan Freelance"
           >
-            Selected Projects
+            Freelance Work
           </h2>
+          <p
+            class="mt-6 mb-12 max-w-2xl text-sm"
+            style="color: var(--muted)"
+            data-en="Client work done outside my full-time role. I built each of these myself, from an empty repo to the production release. The contracts don't allow me to share links or screenshots, but I'm happy to walk through the architecture in an interview."
+            data-id="Proyek klien yang saya kerjakan di luar pekerjaan utama. Semuanya saya bangun sendiri, dari repo kosong sampai rilis production. Kontraknya tidak mengizinkan saya membagikan link atau screenshot, tapi saya siap menjelaskan arsitekturnya saat interview."
+          >
+            Client work done outside my full-time role. I built each of these
+            myself, from an empty repo to the production release. The contracts
+            don't allow me to share links or screenshots, but I'm happy to walk
+            through the architecture in an interview.
+          </p>
         </div>
         <div class="grid md:grid-cols-2 gap-6 fade-in">
           <div class="project-card">
@@ -1099,22 +1068,24 @@
                 <span
                   class="font-mono text-xs px-2 py-1 rounded"
                   style="color: var(--subtle); background: var(--surface)"
-                  >2022 - Now</span
+                  >2022 — Now</span
                 >
               </div>
               <p
                 class="text-sm mb-4 leading-relaxed"
                 style="color: var(--muted)"
-                data-en="Built and enhanced application for company reporting to gov."
-                data-id="Membangun dan meningkatkan aplikasi untuk pelaporan perusahaan kepada pemerintah."
+                data-en="Web app companies use to file their mandatory reports to a government agency. I built it and have kept extending it since 2022, running on Windows Server."
+                data-id="Aplikasi web yang dipakai perusahaan untuk mengirim laporan wajib ke instansi pemerintah. Saya membangunnya dan terus mengembangkannya sejak 2022, berjalan di Windows Server."
               >
-                Built and enhanced application for company reporting to gov.
+                Web app companies use to file their mandatory reports to a
+                government agency. I built it and have kept extending it since
+                2022, running on Windows Server.
               </p>
               <div class="flex flex-wrap gap-2">
                 <span
                   class="font-mono text-xs px-2 py-1 rounded"
                   style="background: var(--surface); color: var(--muted)"
-                  >Vue.js</span
+                  >Svelte</span
                 >
                 <span
                   class="font-mono text-xs px-2 py-1 rounded"
@@ -1158,12 +1129,12 @@
               <p
                 class="text-sm mb-4 leading-relaxed"
                 style="color: var(--muted)"
-                data-en="Large-scale e-commerce system with separate microservices for orders, payments, inventory, and notifications — processing 50,000+ transactions daily."
-                data-id="Sistem e-commerce skala besar dengan microservices terpisah untuk order, payment, inventory, dan notifikasi — memproses 50.000+ transaksi per hari."
+                data-en="E-commerce backend split into separate services for orders, payments, inventory, and notifications. It processes 50,000+ transactions a day."
+                data-id="Backend e-commerce yang dipecah jadi service terpisah untuk order, payment, inventory, dan notifikasi. Memproses 50.000+ transaksi per hari."
               >
-                Large-scale e-commerce system with separate microservices for
-                orders, payments, inventory, and notifications — processing
-                50,000+ transactions daily.
+                E-commerce backend split into separate services for orders,
+                payments, inventory, and notifications. It processes 50,000+
+                transactions a day.
               </p>
               <div class="flex flex-wrap gap-2">
                 <span
@@ -1174,12 +1145,12 @@
                 <span
                   class="font-mono text-xs px-2 py-1 rounded"
                   style="background: var(--surface); color: var(--muted)"
-                  >Django</span
+                  >MongoDB</span
                 >
                 <span
                   class="font-mono text-xs px-2 py-1 rounded"
                   style="background: var(--surface); color: var(--muted)"
-                  >MongoDB</span
+                  >PostgreSQL</span
                 >
                 <span
                   class="font-mono text-xs px-2 py-1 rounded"
@@ -1213,12 +1184,11 @@
               <p
                 class="text-sm mb-4 leading-relaxed"
                 style="color: var(--muted)"
-                data-en="Real-time financial management dashboard for a fintech company featuring interactive charts, automated PDF reports, and webhook notifications."
-                data-id="Dashboard manajemen keuangan real-time untuk perusahaan fintech dengan chart interaktif, laporan PDF otomatis, dan notifikasi webhook."
+                data-en="Real-time finance dashboard for a fintech company: live charts, scheduled PDF reports, and webhook alerts."
+                data-id="Dashboard keuangan real-time untuk perusahaan fintech: chart live, laporan PDF terjadwal, dan notifikasi webhook."
               >
-                Real-time financial management dashboard for a fintech company
-                featuring interactive charts, automated PDF reports, and webhook
-                notifications.
+                Real-time finance dashboard for a fintech company: live charts,
+                scheduled PDF reports, and webhook alerts.
               </p>
               <div class="flex flex-wrap gap-2">
                 <span
@@ -1312,19 +1282,19 @@
           </p>
           <h2
             class="font-display text-4xl mb-4 section-title-line"
-            data-en="Let's Work Together"
-            data-id="Mari Bekerja Sama"
+            data-en="Get in Touch"
+            data-id="Hubungi Saya"
           >
-            Let's Work Together
+            Get in Touch
           </h2>
           <p
             class="mt-6 mb-12 max-w-lg"
             style="color: var(--muted)"
-            data-en="Have an interesting project or want to discuss technology? Feel free to reach out — I'd love to hear from you."
-            data-id="Punya proyek menarik atau ingin berdiskusi tentang teknologi? Jangan ragu untuk menghubungi saya."
+            data-en="Email is the fastest way to reach me — for freelance work, a full-time role, or a question about something on this page."
+            data-id="Email cara tercepat menghubungi saya — untuk freelance, posisi full-time, atau pertanyaan soal isi halaman ini."
           >
-            Have an interesting project or want to discuss technology? Feel free
-            to reach out — I'd love to hear from you.
+            Email is the fastest way to reach me — for freelance work, a
+            full-time role, or a question about something on this page.
           </p>
         </div>
 
@@ -1377,10 +1347,15 @@
             </div>
           </a>
 
-          <!-- Location -->
-          <div
-            class="flex flex-col items-start gap-4 bg-white border rounded-2xl p-6"
+          <!-- GitHub -->
+          <a
+            href="https://github.com/ariadys"
+            target="_blank"
+            rel="noopener"
+            class="group flex flex-col items-start gap-4 bg-white border rounded-2xl p-6 transition-all hover:shadow-lg hover:-translate-y-1"
             style="border-color: var(--border-gray)"
+            onmouseover="this.style.borderColor = 'var(--accent-mid)'"
+            onmouseout="this.style.borderColor = 'var(--border-gray)'"
           >
             <div
               class="w-10 h-10 rounded-xl flex items-center justify-center"
@@ -1397,13 +1372,7 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                 />
               </svg>
             </div>
@@ -1411,24 +1380,22 @@
               <p
                 class="font-mono text-xs uppercase tracking-wide mb-1"
                 style="color: var(--subtle)"
-                data-en="Location"
-                data-id="Lokasi"
               >
-                Location
+                GitHub
               </p>
               <p class="font-medium text-sm" style="color: var(--fg2)">
-                Indonesia
+                github.com/ariadys
               </p>
               <p
                 class="text-xs mt-1"
                 style="color: var(--muted)"
-                data-en="Open to remote work"
-                data-id="Terbuka untuk remote"
+                data-en="Based in Indonesia · open to remote"
+                data-id="Di Indonesia · terbuka untuk remote"
               >
-                Open to remote work
+                Based in Indonesia · open to remote
               </p>
             </div>
-          </div>
+          </a>
 
           <!-- Status -->
           <div
@@ -1464,18 +1431,18 @@
               <p
                 class="font-medium text-sm"
                 style="color: #16a34a"
-                data-en="Available for Project"
+                data-en="Open to freelance projects"
                 data-id="Ada Proyek? Yuk gas."
               >
-                Available for Project
+                Open to freelance projects
               </p>
               <p
                 class="text-xs mt-1"
                 style="color: var(--muted)"
-                data-en="Response within 24h"
-                data-id="Balas dalam 24 jam"
+                data-en="Alongside my full-time role"
+                data-id="Di samping pekerjaan full-time"
               >
-                Response within 24h
+                Alongside my full-time role
               </p>
             </div>
           </div>
@@ -1526,7 +1493,7 @@
           class="font-mono text-xs"
           style="color: var(--subtle)"
           data-en="Built with ❤️"
-          data-id="Dibuat dengan ❤️"
+          data-id="Dibangun dengan ❤️"
         >
           Built with ❤️
         </p>
@@ -1557,45 +1524,6 @@
         // Update html lang attr
         document.documentElement.lang = lang;
       }
-
-      // ── TYPING ANIMATION ─────────────────────────────────────────
-      const phrases = {
-        en: [
-          "Senior Full Stack Developer",
-          "React & Next.js Engineer",
-          "Node.js & Python Developer",
-          "Cloud & DevOps Enthusiast",
-        ],
-        id: [
-          "Senior Full Stack Developer",
-          "Engineer React & Next.js",
-          "Developer Node.js & Python",
-          "Enthusiast Cloud & DevOps",
-        ],
-      };
-      let pi = 0,
-        ci = 0,
-        deleting = false;
-      const typingEl = document.getElementById("typing-text");
-      function type() {
-        const phrase = phrases[currentLang][pi % phrases[currentLang].length];
-        if (!deleting) {
-          typingEl.textContent = phrase.slice(0, ++ci);
-          if (ci === phrase.length) {
-            deleting = true;
-            setTimeout(type, 1800);
-            return;
-          }
-        } else {
-          typingEl.textContent = phrase.slice(0, --ci);
-          if (ci === 0) {
-            deleting = false;
-            pi = (pi + 1) % phrases[currentLang].length;
-          }
-        }
-        setTimeout(type, deleting ? 45 : 75);
-      }
-      type();
 
       // ── SCROLL PROGRESS ──────────────────────────────────────────
       window.addEventListener("scroll", () => {
@@ -1633,8 +1561,157 @@
         a.href = url;
         a.target = "_blank";
         a.click();
-        URL.revokeObjectURL(url);
       }
+
+      // ── HERO PARTICLES ────────────────────────────────────────────
+      (() => {
+        const hero = document.getElementById("hero");
+        const canvas = document.getElementById("hero-canvas");
+        const ctx = canvas && canvas.getContext("2d");
+        if (!ctx || matchMedia("(prefers-reduced-motion: reduce)").matches)
+          return;
+
+        const RGB = "13, 148, 136"; // --accent
+        const LINK = 120; // max distance between linked particles
+        const MOUSE = 160; // cursor influence radius
+        const mouse = { x: null, y: null };
+        let w = 0,
+          h = 0,
+          pts = [],
+          flames = [],
+          raf = null,
+          inView = true;
+
+        const spawn = () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+        });
+
+        function resize() {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          w = hero.clientWidth;
+          h = hero.clientHeight;
+          canvas.width = w * dpr;
+          canvas.height = h * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          // Keep existing particles; only add/remove to match density
+          const n = Math.min(80, Math.round((w * h) / 14000));
+          pts = pts.slice(0, n);
+          while (pts.length < n) pts.push(spawn());
+        }
+
+        function line(x1, y1, x2, y2, alpha) {
+          ctx.strokeStyle = `rgba(${RGB}, ${alpha})`;
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+        }
+
+        // Radial glow; `hot` adds a bright mint core (flame tongues)
+        function glow(x, y, r, alpha, hot) {
+          const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+          g.addColorStop(
+            0,
+            hot ? `rgba(94, 234, 212, ${alpha})` : `rgba(${RGB}, ${alpha})`,
+          );
+          g.addColorStop(hot ? 0.4 : 0.5, `rgba(${RGB}, ${alpha * 0.7})`);
+          g.addColorStop(1, `rgba(${RGB}, 0)`);
+          ctx.fillStyle = g;
+          ctx.fillRect(x - r, y - r, r * 2, r * 2);
+        }
+
+        function frame() {
+          ctx.clearRect(0, 0, w, h);
+          const t = performance.now() / 1000;
+          if (mouse.x !== null) {
+            // Flickering aura around the cursor
+            const r =
+              MOUSE * (0.85 + 0.1 * Math.sin(t * 6) + 0.05 * Math.sin(t * 17));
+            glow(mouse.x, mouse.y, r, 0.16 + 0.04 * Math.sin(t * 11));
+            // Emit flame tongues rising from the cursor
+            for (let k = 0; k < 3 && flames.length < 180; k++)
+              flames.push({
+                x: mouse.x + (Math.random() - 0.5) * 30,
+                y: mouse.y + (Math.random() - 0.5) * 10,
+                vx: (Math.random() - 0.5) * 0.8,
+                vy: -(1.5 + Math.random() * 2),
+                r: 12 + Math.random() * 16,
+                life: 1,
+                seed: Math.random() * 10,
+              });
+          }
+          for (let k = flames.length - 1; k >= 0; k--) {
+            const f = flames[k];
+            f.life -= 0.016;
+            if (f.life <= 0) {
+              flames.splice(k, 1);
+              continue;
+            }
+            f.x += f.vx + Math.sin(t * 8 + f.seed) * 0.6; // sway
+            f.y += f.vy;
+            f.vy *= 1.02; // heat rises faster
+            f.r *= 0.985;
+            glow(f.x, f.y, f.r, 0.22 * f.life, true);
+          }
+          ctx.lineWidth = 1;
+          ctx.fillStyle = `rgba(${RGB}, 0.45)`;
+          for (let i = 0; i < pts.length; i++) {
+            const p = pts[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+
+            if (mouse.x !== null) {
+              const dx = p.x - mouse.x,
+                dy = p.y - mouse.y;
+              const d = Math.hypot(dx, dy);
+              if (d < MOUSE && d > 0) {
+                p.x += (dx / d) * 0.5; // gentle push away
+                p.y += (dy / d) * 0.5;
+                line(p.x, p.y, mouse.x, mouse.y, 0.3 * (1 - d / MOUSE));
+              }
+            }
+            for (let j = i + 1; j < pts.length; j++) {
+              const q = pts[j];
+              const d = Math.hypot(p.x - q.x, p.y - q.y);
+              if (d < LINK) line(p.x, p.y, q.x, q.y, 0.18 * (1 - d / LINK));
+            }
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          raf = requestAnimationFrame(frame);
+        }
+
+        // Run only while hero is on screen and the tab is visible
+        function sync() {
+          const run = inView && !document.hidden;
+          if (run && raf === null) raf = requestAnimationFrame(frame);
+          if (!run && raf !== null) {
+            cancelAnimationFrame(raf);
+            raf = null;
+          }
+        }
+
+        hero.addEventListener("pointermove", (e) => {
+          const r = hero.getBoundingClientRect();
+          mouse.x = e.clientX - r.left;
+          mouse.y = e.clientY - r.top;
+        });
+        hero.addEventListener("pointerleave", () => (mouse.x = mouse.y = null));
+        window.addEventListener("resize", resize);
+        document.addEventListener("visibilitychange", sync);
+        new IntersectionObserver(([e]) => {
+          inView = e.isIntersecting;
+          sync();
+        }).observe(hero);
+
+        resize();
+      })();
     </script>
   </body>
 </html>
